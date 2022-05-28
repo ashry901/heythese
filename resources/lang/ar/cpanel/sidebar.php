@@ -58,4 +58,5 @@ return [
     'Add Issue'             => 'اضافة قضية',
     'Edit Issue'            => 'تعديل قضية',
     'Subsections'           => 'الأقسام الفرعية',
+    'Categories'           => 'الأقسام الرثيسية',
 ];

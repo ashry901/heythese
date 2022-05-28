@@ -17,20 +17,26 @@ class ProfileRegisterController extends Controller
 {
     public function index()
     {
-        $profile_users = Profile::orderBy('id', 'DESC');
-        return view('front.profile.profile-register', compact('profile_users'));
-        //return view('front.profile.profile-register');
+//        $profiles = Profile::orderBy('id');
+//        return view('front.profile.profile-register', compact('profiles'));
+        $data = [];
+        //$data['user_id']        = Section::all();
+
+        $data['sections']       = Section::all();
+        $data['genders']        = Gender::all();
+        $data['nationals']      = Nationalitie::all();
+        return view('front.profile.profile-register', $data);
     }
 
     public function create()
     {
-
         //$data = [];
-        $data['sections']       = Section::all();
-        $data['genders']        = Gender::all();
-        $data['nationals']      = Nationalitie::all();
+//        $data['user_id']        = Section::all();
+//        $data['sections']       = Section::all();
+//        $data['genders']        = Gender::all();
+//        $data['nationals']      = Nationalitie::all();
 
-        return view('front.profile.profile-register', $data);
+//        return view('front.profile.profile-register', $data);
     }
 
     public function show()
@@ -40,24 +46,30 @@ class ProfileRegisterController extends Controller
 
     public function store(ProfileRegisterRequest $request)
     {
+//        $input = $request->all();
+//        $input['category'] = $request->input('category');
+//        Profile::create($input);
+
 //        DB::beginTransaction();
-//
+
 //        try {
-            //$validated = $request->validated();
-            $profile_users = new Profile();
+            $validated = $request->validated();
+            $profiles = new Profile();
 
-            $profile_users->section_id       = $request->section_id;
-            $profile_users->subsection_id    = $request->subsection_id;
-            $profile_users->gender_id        = $request->gender_id;
-            $profile_users->nationalitie_id  = $request->nationalitie_id;
-            $profile_users->phone            = $request->phone;
-            $profile_users->save();
+            //$profiles->user_id          = $request->user_id;
+            $profiles->category         = $request->category;
+            $profiles->section_id       = $request->section_id;
+            $profiles->gender_id        = $request->gender_id;
+            $profiles->nationalitie_id  = $request->nationalitie_id;
+            $profiles->phone            = $request->phone;
+            $profiles->save();
 
-            //DB::commit();
-            toastr()->success(trans('cpanel/messages.success'));
-            return redirect()->route('front.profile.profile-main');
+//            DB::commit();
+
+            return redirect()->route('main');
 
 //        }
+
 //        catch (\Exception $e){
 //            DB::rollback();
 //            return redirect()->back()->withErrors(['error' => $e->getMessage()]);

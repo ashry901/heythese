@@ -51,7 +51,6 @@
                 </ul>
 
                 <ul class="nav navbar-nav float-right">
-                    {{--
                     <li class="dropdown dropdown-language nav-item">
                         <a class="dropdown-toggle nav-link" id="dropdown-flag"
                            href="#" data-toggle="dropdown" aria-haspopup="true"
@@ -77,7 +76,6 @@
                             @endforeach
                         </div>
                     </li>
-                    --}}
 
                     <li class="dropdown dropdown-notification nav-item">
                         <a class="nav-link nav-link-label"

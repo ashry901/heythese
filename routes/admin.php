@@ -21,29 +21,6 @@ Route::group([
             Route::put('update', 'ProfileController@updateprofile')->name('update.profile');
         });
 
-        Route::group(['prefix' => 'grade'], function () {
-            Route::resource('grades', 'GradeController');
-//            Route::get('/', 'GradeController@index')->name('admin.grade');
-//            Route::get('create', 'GradeController@create')->name('admin.grade.create');
-//            Route::post('store', 'GradeController@store')->name('admin.grade.store');
-//            Route::get('edit/{id}', 'GradeController@edit')->name('admin.grade.edit');
-//            Route::post('update/{id}', 'GradeController@update')->name('admin.grade.update');
-//            Route::get('delete/{id}','GradeController@destroy') -> name('admin.grade.delete');
-        });
-
-        Route::group(['prefix' => 'classroom'], function () {
-            Route::resource('classrooms', 'ClassroomController');
-
-            Route::post('delete_all', 'ClassroomController@delete_all')->name('delete_all');
-            Route::post('filter_classes', 'ClassroomController@Filter_Classes')->name('Filter_Classes');
-//            Route::get('/', 'ClassroomController@index')->name('admin.classroom');
-//            Route::get('create', 'ClassroomController@create')->name('admin.classroom.create');
-//            Route::post('store', 'ClassroomController@store')->name('admin.classroom.store');
-//            Route::get('edit/{id}', 'ClassroomController@edit')->name('admin.classroom.edit');
-//            Route::post('update/{id}', 'ClassroomController@update')->name('admin.classroom.update');
-//            Route::get('delete/{id}','ClassroomController@destroy') -> name('admin.classroom.delete');
-        });
-
         Route::group(['prefix' => 'section'], function () {
             Route::get('/', 'SectionController@index')->name('admin.section');
             Route::get('create', 'SectionController@create')->name('admin.section.create');
@@ -62,14 +39,15 @@ Route::group([
         Route::get('delete/{id}','SubsectionController@destroy') -> name('admin.subsections.delete');
         });
 
-        Route::group(['prefix' => 'tests'], function () {
-//        Route::get('/', 'TestsController@index')->name('admin.tests');
-//        Route::get('create', 'TestsController@create')->name('admin.tests.create');
-//        Route::post('store', 'TestsController@store')->name('admin.tests.store');
-//        Route::get('edit/{id}', 'TestsController@edit')->name('admin.tests.edit');
-//        Route::post('update/{id}', 'TestsController@update')->name('admin.tests.update');
-//        Route::get('delete/{id}','TestsController@destroy') -> name('admin.tests.delete');
+        Route::group(['prefix' => 'categories'], function () {
+            Route::get('/', 'CategoriesController@index')->name('admin.categories');
+            Route::get('create', 'CategoriesController@create')->name('admin.categories.create');
+            Route::post('store', 'CategoriesController@store')->name('admin.categories.store');
+            Route::get('edit/{id}', 'CategoriesController@edit')->name('admin.categories.edit');
+            Route::post('update/{id}', 'CategoriesController@update')->name('admin.categories.update');
+            Route::get('delete/{id}', 'CategoriesController@destroy')->name('admin.categories.delete');
         });
+
 
     });
 

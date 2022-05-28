@@ -12,25 +12,21 @@ class Profile extends Model
     use HasTranslations;
 
     protected $fillable =[
-        'user_id',
+        //'user_id',
         'section_id',
-        'subsection_id',
+        'category',
         'gender_id',
         'nationalitie_id',
         'phone',
-        'profile_photo_path',
+        'avatar',
     ];
     //protected $guarded =[];
+    public $translatable = ['category'];
 
     public function user()
     {
         return $this->belongsTo('App\Models\User');
     }
-
-//    public function user()
-//    {
-//        return $this->belongsTo(User::class);
-//    }
 
     public function section()
     {
@@ -47,6 +43,14 @@ class Profile extends Model
         return $this->belongsTo('App\Models\Nationalitie', 'nationalitie_id');
     }
 
+    public function setCategoryAttribute($value)
+    {
+        $this->attributes['category'] = json_encode($value);
+    }
 
+    public function getCategoryAttribute($value)
+    {
+        return $this->attributes['category'] = json_decode($value);
+    }
 
 }

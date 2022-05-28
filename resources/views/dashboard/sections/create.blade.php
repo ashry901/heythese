@@ -13,43 +13,45 @@
 
 <div class="content-header row">
     <div class="content-header-left col-md-6 col-12 mb-2">
-        <h2 class="content-header-title">
-            {{trans('cpanel/teacher.Teachers')}}
-        </h2>
+        <h3 class="content-header-title">Circle Style</h3>
         <div class="row breadcrumbs-top">
             <div class="breadcrumb-wrapper col-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="{{route('admin.dashboard')}}">
-                            {{trans('cpanel/teacher.Dashboard')}}
-                        </a>
+                        <a href="index.html">Home</a>
                     </li>
-
                     <li class="breadcrumb-item">
-                        <a href="{{route('admin.section.create')}}">
-                            {{trans('cpanel/teacher.Teachers')}}
-                        </a>
+                        <a href="#">Page</a>
                     </li>
-
                     <li class="breadcrumb-item active">
-                        {{trans('cpanel/teacher.All Teachers')}}
+                        Form Wizard Circle Steps
                     </li>
-
                 </ol>
             </div>
         </div>
     </div>
 
     <div class="content-header-right col-md-6 col-12">
-        <div class="btn-group float-md-right">
-            <a href=""
-               class="btn btn-info btn-md round" role="button"
-               aria-pressed="true">
-                {{ trans('cpanel/teacher.All Teachers') }}
-            </a>
+        <div class="btn-group float-md-right" role="group"
+             aria-label="Button group with nested dropdown">
+            <button class="btn btn-info round dropdown-toggle dropdown-menu-right box-shadow-2 px-2 mb-1"
+                    id="btnGroupDrop1" type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <i class="ft-settings icon-left"></i>
+                Settings
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="card-bootstrap.html">
+                    Cards
+                </a>
+                <a class="dropdown-item" href="component-buttons-extended.html">
+                    Buttons
+                </a>
+            </div>
         </div>
     </div>
-
 </div>
 
 <div class="content-body">
@@ -58,9 +60,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title" id="basic-layout-form">
-                            Project Info
-                        </h4>
+                        <h4 class="card-title" id="basic-layout-form">Project Info</h4>
                         <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -79,37 +79,28 @@
                             </div>
 
                             <form class="form"
-                                  action="{{ route('admin.section.store') }}"
-                                  method="POST" enctype="multipart/form-data">
+                                  action="{{route('admin.section.store')}}"
+                                  method="POST"
+                                  enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-body">
-                                    <h4 class="form-section"><i class="ft-user"></i>
-                                        Personal Info
+                                    <h4 class="form-section">
+                                        <i class="ft-user"></i> Personal Info
                                     </h4>
 
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="name">
-                                                    Name Arabic
-                                                </label>
-                                                <input type="text"
-                                                       id="name"
-                                                       class="form-control"
-                                                       placeholder="First Name"
-                                                       name="name">
+                                                <label for="name">Name Arabic</label>
+                                                <input type="text" id="name" class="form-control"
+                                                       placeholder="First Name" name="name">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="projectinput2">
-                                                    Name English
-                                                </label>
-                                                <input type="text"
-                                                       id="projectinput2"
-                                                       class="form-control"
-                                                       placeholder="Last Name"
-                                                       name="name_en">
+                                                <label for="projectinput2">Name English</label>
+                                                <input type="text"  class="form-control"
+                                                       placeholder="Last Name" name="name_en">
                                             </div>
                                         </div>
                                     </div>
@@ -118,8 +109,7 @@
 
                                 <div class="form-actions">
                                     <button type="submit" class="btn btn-primary">
-                                        <i class="la la-check-square-o"></i>
-                                        {{ trans('cpanel/grades.Save') }}
+                                        <i class="la la-check-square-o"></i> Save
                                     </button>
                                 </div>
                             </form>
@@ -128,6 +118,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 </div>

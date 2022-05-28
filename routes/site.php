@@ -9,38 +9,49 @@ Route::group([
 ], function () {
 
     Route::group([
-        'namespace' => 'Site\Subscription',
-        'middleware' => 'guest',
-        'prefix' => 'subscription'
+        //'namespace' => 'Site',
+        'prefix' => 'user',
+        'middleware' => 'auth',
     ], function () {
-        Route::get('/', 'SubscriptionController@index')->name('subscriptions');
-    });
 
+        Route::get('category/{slug}', 'CategoryUserController@categoryMain')->name('category');
+
+
+    });
 
     Route::group(['namespace' => 'Site\Profile'], function () {
         Route::group(['middleware' => 'auth', 'prefix' => 'profile'], function () {
 
-            //Route::get('/', 'ProfileRegisterController@index')->name('profile-users');
-            //Route::get('create', 'ProfileUserController@create')->name('profile.create');
-            //Route::post('store', 'ProfileUserController@store')->name('profile.store');
+            Route::get('/', 'ProfileRegisterController@index')->name('profile.profile-register');
+            //Route::get('create', 'ProfileRegisterController@create')->name('profile.create');
+            Route::post('store', 'ProfileRegisterController@store')->name('profile.store');
 
-            Route::get('/', 'ProfileUserController@profileMain')->name('profile-users');
-            Route::get('create', 'ProfileUserController@create')->name('profile.create');
-            Route::post('store', 'ProfileUserController@store')->name('profile.store');
-            //Route::post('update', 'ProfileUserController@updateProfile')->name('profile.update');
+            //Route::get('/', 'ProfileRegisterController@profileMain')->name('profile-users');
+            //Route::get('create', 'ProfileRegisterController@create')->name('profile.create');
+            //Route::post('store', 'ProfileRegisterController@store')->name('profile.store');
+            //Route::post('update', 'ProfileRegisterController@updateProfile')->name('profile.update');
 
-            Route::get('payment', 'ProfileUserController@payment')->name('profile.payment');
-            Route::get('notifications', 'ProfileUserController@notifications')->name('profile.notifications');
-            Route::get('chats', 'ProfileUserController@orders')->name('profile.orders');
-            Route::get('projects', 'ProfileUserController@whishlist')->name('profile.whishlist');
-            Route::get('reset-password', 'ProfileUserController@resetPassword')->name('profile.reset-password');
-//            Route::get('create', 'ProfileUserController@create')->name('profile.create');
-//            Route::post('store', 'ProfileUserController@store')->name('profile.store');
-//            Route::get('edit/{id}', 'ProfileUserController@edit')->name('profile.edit');
-//            Route::post('update/{id}', 'ProfileUserController@update')->name('profile.update');
+            //Route::get('payment', 'ProfileRegisterController@payment')->name('profile.payment');
+            //Route::get('notifications', 'ProfileRegisterController@notifications')->name('profile.notifications');
+            //Route::get('chats', 'ProfileRegisterController@orders')->name('profile.orders');
+            //Route::get('projects', 'ProfileRegisterController@whishlist')->name('profile.whishlist');
+            //Route::get('reset-password', 'ProfileRegisterController@resetPassword')->name('profile.reset-password');
+//            Route::get('create', 'ProfileRegisterController@create')->name('profile.create');
+//            Route::post('store', 'ProfileRegisterController@store')->name('profile.store');
+//            Route::get('edit/{id}', 'ProfileRegisterController@edit')->name('profile.edit');
+//            Route::post('update/{id}', 'ProfileRegisterController@update')->name('profile.update');
 
         });
 
+    Route::group([
+        'namespace' => 'Site\Subscription',
+        'middleware' => 'auth',
+        'prefix' => 'subscription'
+    ], function () {
+
+
+
+    });
 
 
 

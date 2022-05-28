@@ -3,11 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-//use App\Http\Enumerations\CategoryType;
 
 class SubsectionRequest extends FormRequest
 {
-
     public function authorize()
     {
         return true;
@@ -17,15 +15,17 @@ class SubsectionRequest extends FormRequest
     {
         return [
             'list_classes.*.name' => 'required',
-            'list_classes.*.name_class_en' => 'required',
+            'list_classes.*.name_subsection_en' => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-            'name_subsection.required'     => trans('cpanel.validation.required'),
-            'name_subsection_en.required'  => trans('cpanel.validation.required'),
+            'name.required'     => trans('validation.required'),
+            'name.unique'       => trans('validation.unique'),
+            'name_en.required'  => trans('validation.required'),
+            'name_en.unique'    => trans('validation.unique'),
         ];
     }
 }

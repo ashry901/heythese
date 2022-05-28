@@ -38,28 +38,40 @@
                 </a>
             </li>
 
-            <!-- Grades-->
             <li class=" nav-item">
-                <a href="{{route('grades.index')}}">
+                <a href="{{route('admin.categories')}}">
                     <i class="la la-align-justify"></i>
                     <span class="badge badge badge-info badge-pill float-right mr-2">
-                {{\App\Models\Grade::count()}}
-            </span>
-                    <span class="menu-title" data-i18n="Grades">
-                {{trans('cpanel/sidebar.Grades')}}
-            </span>
+                        {{\App\Models\Category::count()}}
+                    </span>
+                    <span class="menu-title" data-i18n="Categories">
+                        {{trans('cpanel/sidebar.Categories')}}
+                    </span>
+                </a>
+            </li>
+
+            <!-- Grades-->
+            <li class=" nav-item">
+                <a href="">
+                    <i class="la la-align-justify"></i>
+                    <span class="badge badge badge-info badge-pill float-right mr-2">
+
+                    </span>
+                            <span class="menu-title" data-i18n="Grades">
+                        {{trans('cpanel/sidebar.Grades')}}
+                    </span>
                 </a>
             </li>
 
             <!-- classes-->
             <li class=" nav-item">
-                <a href="{{route('classrooms.index')}}">
+                <a href="">
                     <i class="la la-align-justify"></i>
                     <span class="menu-title" data-i18n="Classes">
                 {{trans('cpanel/sidebar.Classes')}}
             </span>
                     <span class="badge badge badge-info badge-pill float-right mr-2">
-                {{\App\Models\Classroom::count()}}
+
             </span>
                 </a>
             </li>

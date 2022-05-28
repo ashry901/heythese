@@ -12,10 +12,10 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{route('admin.section.delete', 'test')}}" method="GET">
+                <form action="{{route('admin.subsections.delete', 'test')}}" method="GET">
                     @csrf
 
-                    <input type="hidden" name="id" value="{{$section->id}}">
+                    <input type="hidden" name="id" value="{{$subsection->id}}">
                     <h5 style="font-family: 'Cairo', sans-serif;">
                         {{trans('cpanel/sections.Deleted_Section_tilte')}}
                     </h5>

@@ -25,8 +25,6 @@
     </div>
 </header>
 
-<!-- SVG Divider -->
-
 <section class="divider bg-dark">
     <svg class="svg svg-light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="100" viewBox="0 0 1920 100" preserveAspectRatio="none meet">
         <path d="M0,11S168.915,69.242,406.27,70.7,685.853,57.593,850.4,37.207,1259.752,73.448,1517.323,70.7,1920,19.667,1920,19.667V101H0Z" transform="translate(0 -1)" />
@@ -74,8 +72,8 @@
 
                                                     @error('name')
                                                     <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
                                                     @enderror
                                                 </div>
                                             </div>
@@ -92,9 +90,9 @@
                                                            required>
 
                                                     @error('email')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
                                                     @enderror
                                                 </div>
                                             </div>
@@ -110,8 +108,8 @@
 
                                                     @error('password')
                                                     <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
                                                     @enderror
                                                 </div>
                                             </div>
@@ -148,24 +146,4 @@
 
 @section('script')
 
-    <script>
-        $('input:radio[name="type"]').change(
-            function(){
-                if (this.checked && this.value == '2') {
-                    $('#cats_list').removeClass('hidden');
-
-                }else{
-                    $('#cats_list').addClass('hidden');
-                }
-            });
-    </script>
-
-    {{--
-    <script>
-        $(function(){
-            if($('#customExampleCheck1').is(":checked"))
-            $(":checkbox").not($('#customExampleCheck2')).prop("disabled", true);
-        })
-    </script>
-    --}}
 @endsection

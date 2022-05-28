@@ -13,43 +13,47 @@
 
 <div class="content-header row">
     <div class="content-header-left col-md-6 col-12 mb-2">
-        <h2 class="content-header-title">
-            {{trans('cpanel/teacher.Teachers')}}
-        </h2>
+        <h3 class="content-header-title">Circle Style</h3>
         <div class="row breadcrumbs-top">
             <div class="breadcrumb-wrapper col-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="{{route('admin.dashboard')}}">
-                            {{trans('cpanel/teacher.Dashboard')}}
-                        </a>
+                        <a href="">Home</a>
                     </li>
-
                     <li class="breadcrumb-item">
                         <a href="{{route('admin.section.create')}}">
-                            {{trans('cpanel/sections.Create Section')}}
+                            Section Create
                         </a>
                     </li>
-
                     <li class="breadcrumb-item active">
-                        {{trans('cpanel/sections.All Sections')}}
+                        Form Wizard Circle Steps
                     </li>
-
                 </ol>
             </div>
         </div>
     </div>
 
     <div class="content-header-right col-md-6 col-12">
-        <div class="btn-group float-md-right">
-            <a href=""
-               class="btn btn-info btn-md round" role="button"
-               aria-pressed="true">
-                {{ trans('cpanel/teacher.All Teachers') }}
-            </a>
+        <div class="btn-group float-md-right" role="group"
+             aria-label="Button group with nested dropdown">
+            <button class="btn btn-info round dropdown-toggle dropdown-menu-right box-shadow-2 px-2 mb-1"
+                    id="btnGroupDrop1" type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <i class="ft-settings icon-left"></i>
+                Settings
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="card-bootstrap.html">
+                    Cards
+                </a>
+                <a class="dropdown-item" href="component-buttons-extended.html">
+                    Buttons
+                </a>
+            </div>
         </div>
     </div>
-
 </div>
 
 <div class="content-body">
@@ -77,51 +81,36 @@
                                 <table class="table table-striped table-bordered zero-configuration">
                                     <thead>
                                     <tr>
-                                        <th style="width: 7%">Num</th>
-                                        <th>Name</th>
-                                        <th style="width: 25%">Actions</th>
+                                        <th>#</th>
+                                        <th>{{ trans('cpanel/grades.Name') }}</th>
+                                        <th>{{ trans('cpanel/grades.Actions') }}</th>
                                     </tr>
                                     </thead>
-
-                                    <tbody>
-                                    @foreach ($sections as $section)
-                                    <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $section->name }}</td>
-                                        <td>
-                                            {{-- {{route('processingFee.edit',$processingFee->id)}} --}}
-                                            <a href="{{route('admin.section.edit', $section->id)}}"
-                                               class="btn btn-info btn-sm" role="button"
-                                               aria-pressed="true">
-                                                {{trans('cpanel/students.Edit')}}
-                                            </a>
-
-                                            &nbsp; &nbsp; &nbsp; &nbsp;
-
-                                            {{--
-                                            <a href="{{route('processingFee.edit',$processingFee->id)}}"
-                                               class="btn btn-danger btn-sm" role="button"
-                                               aria-pressed="true">
-                                                {{trans('cpanel/students.Delete')}}
-                                            </a>
-                                            --}}
-                                            <button type="button"
-                                                    class="btn btn-danger btn-sm"
-                                                    data-toggle="modal"
-                                                    data-target="#Delete_Section{{$section->id}}">
-                                                <i class="ft-trash-2"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    @include('dashboard.sections.delete')
-                                    @endforeach
-                                    </tbody>
-
+                                    @isset($sections)
+                                        @foreach ($sections as $section)
+                                        <tbody>
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $section->name }}</td>
+                                                <td>
+                                                    <a href="{{route('admin.section.edit', $section->id)}}"
+                                                       class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
+                                                        Edit
+                                                    </a>
+                                                    <a href="{{route('admin.section.delete', $section->id)}}"
+                                                       class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
+                                                        Delete
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        @endforeach
+                                    @endisset
                                     <tfoot>
                                     <tr>
-                                        <th>Num</th>
-                                        <th>Name</th>
-                                        <th>Actions</th>
+                                        <th>#</th>
+                                        <th>{{ trans('cpanel/grades.Name') }}</th>
+                                        <th>{{ trans('cpanel/grades.Actions') }}</th>
                                     </tr>
                                     </tfoot>
                                 </table>

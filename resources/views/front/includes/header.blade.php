@@ -1,9 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-sticky navbar-light bg-white">
-{{--<nav class="navbar navbar-sticky fixed-top navbar-expand-lg py-2">--}}
-{{--<nav class="navbar navbar-expand-lg navbar-light bg-white px-4">--}}
+<nav class="navbar navbar-expand-lg navbar-sticky navbar-dark">
     <div class="container">
 
         <!-- Logo -->
+
         <a class="navbar-brand mr-1" href="{{ route('main') }}">
             <img src="{{asset('ashry/front/assets/images/logo/logompns3-removebg.png')}}"
                  alt="..." width="70">
@@ -16,47 +15,39 @@
             <div class="d-block d-lg-none">
                 <div class="p-3">
                     <div class="d-flex justify-content-between align-items-center">
+                        {{--<img src="{{asset('ashry/front/assets/svg/reveal-symbol.svg')}}" alt="...">--}}
                         <img src="{{asset('ashry/front/assets/images/logo/logompns3-removebg.png')}}"
                              alt="..." width="100">
                         <button class="btn p-0" type="button" data-toggle="collapse"
-                                data-target="#mainNavbar" aria-controls="mainNavbar"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                                data-target="#mainNavbar"
+                                aria-controls="mainNavbar" aria-expanded="false"
+                                aria-label="Toggle navigation">
                             <span class="icon icon-cross font-size-lg"></span>
                         </button>
                     </div>
                 </div>
                 <div class="bg-light">
                     <div class="form-group form-group-icon">
-                        <input type="text" class="form-control form-control-simple"
-                               placeholder="Search site">
-                        <button class="btn btn-clean">
-                            <i class="icon icon-magnifier"></i>
-                        </button>
+                        <input type="text" class="form-control form-control-simple" placeholder="Search site">
+                        <button class="btn btn-clean"><i class="icon icon-magnifier"></i></button>
                     </div>
                 </div>
             </div>
 
             <!-- Navbar links -->
-
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('main') }}">Home</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">
-                        About Us
-                    </a>
-                </li>
 
                 <!-- Mega dropdown -->
                 <li class="nav-item dropdown position-static">
-                    <a class="nav-link dropdown-toggle" href="#"
-                       id="ecommerce" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        Features
-                    </a>
+                    <a class="nav-link dropdown-toggle"
+                       href="#" id="ecommerce"
+                       data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Products</a>
 
                     <div class="dropdown-menu w-100 bg-white border-top"
                          aria-labelledby="ecommerce">
@@ -67,37 +58,37 @@
                                     <div class="col-lg-3">
 
                                         <div class="pre-label p-2">
-                                            Features
+                                            Lorem Ipsum
                                         </div>
 
                                         <a class="dropdown-item rounded-sm"
                                            href="#">
-                                            <p>Products grid</p>
-                                            <span class="label">Cards grid preview</span>
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
                                         <a class="dropdown-item rounded-sm"
                                            href="#">
-                                            <p>Products list</p>
-                                            <span class="label">Cards list preview</span>
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
                                         <a class="dropdown-item rounded-sm"
                                            href="#">
-                                            <p>Products topbar</p>
-                                            <span class="label">Card grid with top filters</span>
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
                                         <a class="dropdown-item rounded-sm"
                                            href="#">
-                                            <p>Products grid flat <span class='badge badge-danger'>New</span></p>
-                                            <span class="label">Cards with flat filters</span>
+                                            <p>Lorem Ipsum is <span class='badge badge-danger'>New</span></p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
                                         <a class="dropdown-item rounded-sm"
                                            href="#">
-                                            <p>Products list flat</p>
-                                            <span class="label">Cards with flat filters</span>
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
                                     </div>
@@ -105,25 +96,25 @@
                                     <div class="col-lg-3">
 
                                         <div class="pre-label p-2">
-                                            Orders
+                                            Lorem Ipsum
                                         </div>
 
                                         <a class="dropdown-item rounded-sm"
                                            href="#">
-                                            <p>Checkout</p>
-                                            <span class="label">Order checkout example</span>
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
                                         <a class="dropdown-item rounded-sm"
                                            href="#">
                                             <p>Login & register</p>
-                                            <span class="label">Login forms</span>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
                                         <a class="dropdown-item rounded-sm"
                                            href="#">
-                                            <p>Delivery</p>
-                                            <span class="label">Delivery methods</span>
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
                                         <a class="dropdown-item rounded-sm"
@@ -143,22 +134,35 @@
                                     <div class="col-lg-3">
 
                                         <div class="pre-label p-2">
-                                            Product page
+                                            Lorem Ipsum is
                                         </div>
 
-                                        <a class="dropdown-item rounded-sm" href="#">
-                                            <p>Product page</p>
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
                                             <span class="label">Simple preview</span>
                                         </a>
 
-                                        <a class="dropdown-item rounded-sm" href="#">
-                                            <p>Product advanced</p>
-                                            <span class="label">Advanced preview</span>
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
-                                        <a class="dropdown-item rounded-sm" href="#">
-                                            <p>Product flat <span class='badge badge-danger'>New</span></p>
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is <span class='badge badge-danger'>New</span></p>
                                             <span class="label">Flat preview</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
                                         </a>
 
                                     </div>
@@ -169,28 +173,260 @@
                                             Account
                                         </div>
 
-                                        <a class="dropdown-item rounded-sm" href="#">
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
                                             <p>Profile page</p>
                                             <span class="label">User profile</span>
                                         </a>
 
-                                        <a class="dropdown-item rounded-sm" href="#">
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
                                             <p>Payment options</p>
                                             <span class="label">Set default payemnt</span>
                                         </a>
 
-                                        <a class="dropdown-item rounded-sm" href="#">
-                                            <p>Notifications</p>
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
                                             <span class="label">Edit alerts</span>
                                         </a>
 
-                                        <a class="dropdown-item rounded-sm" href="#">
-                                            <p>My Orders</p>
-                                            <span class="label">Order history</span>
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
                                         </a>
 
-                                        <a class="dropdown-item rounded-sm" href="#">
-                                            <p>Wishlist</p>
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Saved products</span>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Single dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="support"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Support
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="support">
+                        <a class="dropdown-item" href="#">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <span class="px-1 text-primary">
+                                        <i class="icon icon-book"></i>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="px-2">
+                                        <p>Lorem Ipsum</p>
+                                        <span class="label">Lorem Ipsum</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#" >
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <span class="px-1 text-danger">
+                                        <i class="icon icon-heart-pulse"></i>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="px-2">
+                                        <p>Lorem Ipsum</p>
+                                        <span class="label">Lorem Ipsum</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item"
+                           href="#" >
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <span class="px-1 text-dark">
+                                        <i class="icon icon-cart"></i>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="px-2">
+                                        <p>Lorem Ipsum</p>
+                                        <span class="label">Lorem Ipsum</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Mega dropdown -->
+                <li class="nav-item dropdown position-static">
+                    <a class="nav-link dropdown-toggle"
+                       href="#" id="ecommerce"
+                       data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        Use cases
+                    </a>
+
+                    <div class="dropdown-menu w-100 bg-white border-top"
+                         aria-labelledby="ecommerce">
+                        <div class="py-3 px-lg-4 py-lg-5">
+                            <div class="container d-block p-0">
+                                <div class="row">
+
+                                    <div class="col-lg-3">
+
+                                        <div class="pre-label p-2">
+                                            Lorem Ipsum
+                                        </div>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is <span class='badge badge-danger'>New</span></p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="pre-label p-2">
+                                            Lorem Ipsum
+                                        </div>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Login & register</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Payment</p>
+                                            <span class="label">Payment options</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Receipt</p>
+                                            <span class="label">Receipt &amp; email confirmation</span>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="pre-label p-2">
+                                            Lorem Ipsum is
+                                        </div>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Simple preview</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is <span class='badge badge-danger'>New</span></p>
+                                            <span class="label">Flat preview</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="pre-label p-2">
+                                            Account
+                                        </div>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Profile page</p>
+                                            <span class="label">User profile</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Payment options</p>
+                                            <span class="label">Set default payemnt</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Edit alerts</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
                                             <span class="label">Saved products</span>
                                         </a>
 
@@ -203,10 +439,186 @@
                 </li>
 
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('pricing') }}">
+                        Pricing
+                    </a>
+                </li>
 
+                <!-- Mega dropdown -->
+                <li class="nav-item dropdown position-static">
+                    <a class="nav-link dropdown-toggle"
+                       href="#" id="ecommerce"
+                       data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        Resources
+                    </a>
+
+                    <div class="dropdown-menu w-100 bg-white border-top"
+                         aria-labelledby="ecommerce">
+                        <div class="py-3 px-lg-4 py-lg-5">
+                            <div class="container d-block p-0">
+                                <div class="row">
+
+                                    <div class="col-lg-3">
+
+                                        <div class="pre-label p-2">
+                                            Features
+                                        </div>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is <span class='badge badge-danger'>New</span></p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="pre-label p-2">
+                                            Lorem Ipsum
+                                        </div>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Login & register</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Payment</p>
+                                            <span class="label">Payment options</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Receipt</p>
+                                            <span class="label">Receipt &amp; email confirmation</span>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="pre-label p-2">
+                                            Lorem Ipsum is
+                                        </div>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Simple preview</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is <span class='badge badge-danger'>New</span></p>
+                                            <span class="label">Flat preview</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <div class="pre-label p-2">
+                                            Account
+                                        </div>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Profile page</p>
+                                            <span class="label">User profile</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Payment options</p>
+                                            <span class="label">Set default payemnt</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Edit alerts</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Lorem Ipsum is</span>
+                                        </a>
+
+                                        <a class="dropdown-item rounded-sm"
+                                           href="#">
+                                            <p>Lorem Ipsum is</p>
+                                            <span class="label">Saved products</span>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
 
 
                 <!-- Links mobile -->
+                {{--
                 <li class="nav-item d-block d-lg-none">
                     <hr>
                     <a href="#" class="nav-link"><small>Documentation</small></a>
@@ -229,11 +641,7 @@
                     </div>
 
                 </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('portfolio') }}">Portfolio</a>
-                </li>
+                --}}
 
                 <!-- Authentication Links -->
                 @guest
@@ -258,12 +666,13 @@
                         <a class="nav-link dropdown-toggle" href="#" id="pages"
                            data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">
-                           Welcome {{ Auth::user()->name }}
+                            {{ Auth::user()->name }}
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="pages">
 
-                            <a class="dropdown-item" href="{{ route('profile-users') }}">
+                            <a class="dropdown-item"
+                               href="{{ route('profile.profile-register') }}">
                                 <div class="d-flex align-items-center">
                                     <div>
                                         <div class="px-1">
@@ -299,54 +708,25 @@
                                   method="POST" class="d-none">
                                 @csrf
                             </form>
-
-
                         </div>
-
-
                     </li>
                 @endguest
-
-                <!-- Single dropdown -->
-
 
             </ul>
         </div>
 
         <!-- Navbar toggler -->
-
         <div class="d-flex align-items-center">
-
-            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                &nbsp; &nbsp;
-                <a class="btn btn-sm btn-primary btn-rounded ml-lg-4 px-3"
-                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
-                   hreflang="{{ $localeCode }}">
-
-                    {{ $properties['native'] }}
-
-                </a>
-            @endforeach
-
-            <button class="navbar-toggler"
-                    type="button" data-toggle="collapse"
+            <a class="btn btn-sm btn-primary btn-rounded ml-lg-4 px-3"
+               href="#">
+                Get Started
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse"
                     data-target="#mainNavbar"
                     aria-controls="mainNavbar"
                     aria-expanded="false"
                     aria-label="Toggle navigation">
-                <span class="icon icon-menu"></span>
-            </button>
-        </div>
-
-        <div class="d-flex align-items-center">
-            <a class="btn btn-sm btn-primary btn-rounded ml-lg-4 px-3"
-               href="#">
-
-                Get Started
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#mainNavbar" aria-controls="mainNavbar"
-                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon icon-menu"></span>
             </button>
         </div>

@@ -15,7 +15,10 @@ class SectionsSeeder extends Seeder
         $sections = [
             ['en' => 'System Integrator',   'ar' => 'نظام موحد'],
             ['en' => 'Service Provider', 'ar' => 'مقدم الخدمة'],
+            ['en' => 'Production/Rental',   'ar' => 'بيت الإنتاج/الإيجار'],
             ['en' => 'Free Lancer',   'ar' => 'مستقل'],
+            ['en' => 'General User', 'ar' => 'مستخدم عام'],
+            ['en' => 'Others',   'ar' => 'اخر'],
 
         ];
         foreach ($sections as $ge) {

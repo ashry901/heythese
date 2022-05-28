@@ -6,22 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Mobile Web-app fullscreen -->
-
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Meta tags -->
-
     <meta name="description" content="Extended Bootstrap 4 Template">
     <meta name="author" content="Goran Hrustic">
     <link rel="icon" href="{{asset('ashry/front/assets/svg/favicon.ico')}}">
 
     <!-- Title -->
-
     <title>@yield('title')</title>
 
     <!-- Vendor stylesheets -->
-
     <link rel="stylesheet" media="all" href="{{asset('ashry/front/css/vendor/animate.css')}}" />
     <link rel="stylesheet" media="all" href="{{asset('ashry/front/css/vendor/font-awesome.css')}}" />
     <link rel="stylesheet" media="all" href="{{asset('ashry/front/css/vendor/linear-icons.css')}}" />
@@ -33,30 +29,27 @@
     @yield('style')
     <link rel="stylesheet" media="all" href="{{asset('ashry/front/css/style.css')}}" />
 
-
     <!--HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries-->
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+{{--    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>--}}
+{{--    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>--}}
 
 
 </head>
 
 <body>
 
-
-{{--    <div class="loader">--}}
-{{--        <div class="spinner-border" role="status">--}}
-{{--            <span class="sr-only">Loading...</span>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
+    <div class="loader">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
 
     <!-- Main navigation -->
     @include('front.includes.header')
 
     <!-- Hero -->
-    {{--    @yield('slider')--}}
-
+    {{--    @yield('slider') --}}
     <!-- Intro -->
     @yield('content')
 
@@ -77,7 +70,6 @@
     <script src="{{asset('ashry/front/js/vendor/isotope.pkgd.js')}}"></script>
 
     <!-- Template Scripts -->
-
     <script src="{{asset('ashry/front/js/main.js')}}"></script>
     <script src="{{asset('ashry/front/js/custom.js')}}"></script>
     @yield('script')

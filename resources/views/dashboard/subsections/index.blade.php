@@ -100,10 +100,10 @@
                                     @foreach ($list_classes as $subsection)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $subsection->name_class }}</td>
-                                            <td>{{ $subsection->sectios->name }}</td>
+                                            <td>{{ $subsection->name_subsection }}</td>
+                                            <td>{{ $subsection->sections->name }}</td>
                                             <td>
-                                                <a href="{{route('admin.subsection.edit', $subsection->id)}}"
+                                                <a href="{{route('admin.subsections.edit', $subsection->id)}}"
                                                    class="btn btn-info btn-sm" role="button"
                                                    aria-pressed="true">
                                                     {{trans('cpanel/students.Edit')}}

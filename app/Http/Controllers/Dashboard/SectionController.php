@@ -5,49 +5,59 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SectionRequest;
 use App\Models\Section;
-use App\Models\Subsection;
+use CodeZero\UniqueTranslation\UniqueTranslationRule;
 use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\DB;
 use DB;
 
 class SectionController extends Controller
 {
+//    public function index()
+//    {
+//        $sections = Section::all();
+//        return view('dashboard.sections.index', compact('sections'));
+//    }
+
     public function index()
     {
-        $sections = Section::all();
+        $sections = Section::orderBy('id', 'DESC')->paginate(10);
         return view('dashboard.sections.index', compact('sections'));
     }
 
     public function create()
     {
-        return view('dashboard.sections.create');
+        $sections = Section::select('id')->get();
+        return view('dashboard.sections.create', compact('sections'));
     }
 
     public function store(SectionRequest $request)
     {
-        //try {
-        $validated = $request->validated();
-        $section = new Section();
+        try {
+            DB::beginTransaction();
 
-        $section->name = ['en' => $request->name_en, 'ar' => $request->name];
+            $section = Section::create($request->except('_token'));
 
-        $section->save();
+            // save translations
+            //$section->name = $request->name;
+            $section->name = ['en' => $request->name_en, 'ar' => $request->name];
+            $section->save();
 
-        toastr()->success(trans('cpanel/messages.success'));
+            DB::commit();
+            return redirect()->route('admin.section')->with(['success' => 'Added Successfully']);
 
-        return redirect()->route('admin.section');
-
-        //      }
-        //          catch (\Exception $e){
-        //              return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-        //          }
+        } catch (\Exception $ex) {
+            DB::rollback();
+            return redirect()->route('admin.section')->with(['error' => 'Something Wrong, Please Try Again']);
+        }
     }
 
     public function edit($id)
     {
+        //get specific categories and its translations
         $section = Section::find($id);
+
         if (!$section)
-            return redirect()->route('admin.section')
-                ->with(['error' => 'This Section Does Not Exist']);
+            return redirect()->route('admin.section')->with(['error' => 'This Brand Does Not Exist']);
 
         return view('dashboard.sections.edit', compact('section'));
     }
@@ -55,6 +65,8 @@ class SectionController extends Controller
     public function update($id, SectionRequest $request)
     {
         try {
+            //validation
+            //update DB
             $section = Section::find($id);
 
             if (!$section)
@@ -62,8 +74,10 @@ class SectionController extends Controller
 
             DB::beginTransaction();
 
+            $section->update($request->except('_token', 'id'));
+
             //save translations
-            $section->name = ['en' => $request->name_en, 'ar' => $request->name];
+            $section->name = $request->name;
             $section->save();
 
             DB::commit();
@@ -74,22 +88,28 @@ class SectionController extends Controller
             DB::rollback();
             return redirect()->route('admin.section')->with(['error' => 'Something Wrong, Please Try Again']);
         }
-
-
     }
 
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-        $subsection = Subsection::where('section_id', $request->id)->pluck('section_id');
+        try {
+            DB::beginTransaction();
 
-        if($subsection->count() == 0){
+            //get specific categories and its translations
+            $section = Section::find($id);
 
-            $sections = Section::findOrFail($request->id)->delete();
-            toastr()->error(trans('cpanel/messages.Delete'));
-            return redirect()->route('admin.section');
-        }else{
-            toastr()->error(trans('Grades_trans.delete_Grade_Error'));
-            return redirect()->route('admin.section');
+            if (!$section)
+                return redirect()->route('admin.section')->with(['error' => 'This Brand Does Not Exist']);
+
+            $section->delete();
+
+            DB::commit();
+            return redirect()->route('admin.section')->with(['success' => 'Deleted Successfully']);
+
+        } catch (\Exception $ex) {
+            DB::rollback();
+            return redirect()->route('admin.section')->with(['error' => 'Something Wrong, Please Try Again']);
         }
     }
+
 }

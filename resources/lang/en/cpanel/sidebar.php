@@ -58,4 +58,5 @@ return [
     'Add Issue'             => 'Add Issue',
     'Edit Issue'            => 'Edit Issue',
     'Subsections'           => 'Subsections',
+    'Categories'            => 'Categories',
 ];

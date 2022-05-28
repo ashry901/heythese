@@ -15,28 +15,16 @@
                         <br><br>
                     </small>
                 </div>
+
                 <div class="col-lg-4 text-lg-right pt-2 pt-lg-0">
                     <ol class="breadcrumb breadcrumb-light justify-content-lg-end">
-                        <li class="breadcrumb-item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="#">Library</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="#">Category</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">
-                            Data
-                        </li>
+
                     </ol>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
-    <!-- SVG Divider -->
 
 <section class="divider bg-dark">
     <svg class="svg svg-light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="100" viewBox="0 0 1920 100" preserveAspectRatio="none meet">
@@ -47,16 +35,10 @@
 </section>
 
 <section class="pt-0">
-
-    <!-- Checkout steps -->
-
-    <!-- Login &amp; register -->
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8">
                 <div class="accordion" id="accordion1">
-
-                    <!-- Checkout login -->
                     <div class="card card-panel bg-white shadow-sm mb-2">
 
                         <div class="card-header py-4 collapsed bg-white" role="button"
@@ -79,30 +61,30 @@
                                                 <div class="form-group">
                                                     <input type="email" value="{{ old('email') }}"
                                                            class="form-control form-control-simple
-                                                                @error('email') is-invalid @enderror"
+                                                            @error('email') is-invalid @enderror"
                                                            name="email" id="email"
                                                            required autocomplete="email" autofocus>
 
 
                                                     @error('email')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
                                                     @enderror
                                                 </div>
 
                                                 <div class="form-group">
                                                     <input id="password" type="password" value=""
                                                            class="form-control form-control-simple
-                                                            @error('password') is-invalid @enderror"
+                                                        @error('password') is-invalid @enderror"
                                                            name="password"
                                                            required autocomplete="current-password">
 
 
                                                     @error('password')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
                                                     @enderror
 
                                                 </div>
@@ -138,8 +120,5 @@
         </div>
     </div>
 </section>
-
-
-
 
 @endsection

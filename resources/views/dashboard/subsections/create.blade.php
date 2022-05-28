@@ -110,7 +110,7 @@
                                                 <label for="Email">
                                                     {{ trans('cpanel/myclasses.Name Class En') }}
                                                 </label>
-                                                <input class="form-control" type="text" name="name_class_en" />
+                                                <input class="form-control" type="text" name="name_subsection_en" />
                                             </div>
 
                                             <div class="col-md-3 col-sm-12 form-group">
